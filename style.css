@@ -1,0 +1,181 @@
+/* task1 */
+.task1-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200vh;
+}
+.box {
+    border: 2px solid rgb(255, 0, 149);
+    padding: 50px;
+}
+/* task2 */
+nav {
+    background-color:rgb(209, 200, 200);
+    display: flex;
+    justify-content: space-around;
+}
+nav a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 25px;
+}
+.boxes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 20px;
+    flex-wrap: wrap;
+
+}
+.box1 , .box2 {
+    border:  3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.box1 p, .box2 p {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.box2 {
+    margin-left: 10px;
+}
+.box-footer {
+    background-color:rgb(209, 200, 200);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width:911px) {
+    .task2-container{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .boxes {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr ;
+        margin: 10px;
+    }
+    .box1 {
+        margin-bottom: 10px;
+    }
+ .box2 {
+    margin: 0;
+ }
+}
+
+/* task2 */
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 500px;     
+    margin: 50px 50px 0 50px;   
+}
+.child1 {
+    background-color: rgb(145 145 234);
+    grid-column:1/4 ;
+    margin-bottom: 5px;
+}
+.child2 {
+    background-color: #e35427;
+    grid-row: 2/7;
+}
+.child3 {
+    background-color: rgb(15, 166, 166);
+    grid-row: 2/7;
+    margin: 0px 5px;
+}
+.child4 {
+    background-color: #e32743;
+    grid-row: 2/7;
+}
+.child5 {
+    background-color: rgb(88, 88, 122);
+    grid-column:1/4 ;
+    margin-top: 5px;
+
+}
+.child1 , .child2 , .child3 , .child4 , .child5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+@media (max-width:1000px) {
+    section {
+        display: grid;
+    grid-template-columns: repeat(5, 1fr);
+        margin: 50px 50px 0 50px;   
+    }
+    .child3 , .child4 {
+        margin: 5px 0;
+    }
+    .child1 , .child2 , .child3 , .child4 , .child5{
+        grid-column:1/5 ;
+        margin-top: 5px;
+    }
+    .child1 {
+        grid-row: 1/2;
+    }
+    .child2 {
+        grid-row: 2/3;
+    }
+    .child3 {
+        grid-row: 3/4;
+    }
+    .child4 {
+        grid-row: 4/5;
+    }
+    .child5{
+        grid-row: 5/6;
+    }
+}
+/* task3 */
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #9281ff;
+
+
+}
+.parent {
+    display: grid;
+    grid-template-areas:
+        'menu header header header header header'
+        'menu main main main right right'
+        'footer footer footer footer right right';
+    gap: 10px;
+    padding: 10px;
+    width: 40%;
+    transform: rotate(45deg);
+    height: 400px;
+}
+
+.parent > div {
+  background-color: rgba(190, 24, 24, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+@media screen and (max-width:1200px) and (min-width:993px){
+
+    .parent{
+        transform: rotate(30deg);
+    }
+    .grid-container{
+        background-color: #f4c472;
+    }
+}
